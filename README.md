@@ -56,8 +56,9 @@ A Frutiger Aero styled IDE built in Rust using egui, supporting multiple program
 
 ## Yellowcake Language
 
-The custom Yellowcake language (`.yc` extension) is designed for nuclear computing applications with syntax inspired by Rust and functional programming concepts.
+The custom Yellowcake language (`.yelcake` extension) is designed with more human commands
 
 ## License
 
 MIT License - see LICENSE file for details
+
