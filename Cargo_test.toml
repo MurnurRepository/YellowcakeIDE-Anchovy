@@ -1,0 +1,10 @@
+[package]
+name = "yellercake-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "test"
+path = "test_compiler.rs"

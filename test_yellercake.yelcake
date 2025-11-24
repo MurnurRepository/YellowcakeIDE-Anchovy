@@ -1,0 +1,2 @@
+insertentity(window)-locationxy(10, 20)-dimensions(400x300)
+insertentity(button)-locationxy(50, 60)-dimensions(100x50)

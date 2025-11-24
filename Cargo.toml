@@ -1,0 +1,75 @@
+[package]
+name = "yellowcake-ide"
+version = "0.1.0"
+edition = "2021"
+authors = ["YellowcakeIDE Team"]
+description = "A Frutiger Aero styled IDE for multiple programming languages"
+repository = "https://github.com/yellowcake-ide/yellowcake-ide"
+license = "MIT"
+keywords = ["ide", "editor", "frutiger-aero", "syntax-highlighting", "yellercake", "compiler"]
+categories = ["development-tools", "text-editors"]
+
+[[bin]]
+name = "yellowcake-ide"
+path = "src/main.rs"
+
+[[bin]]
+name = "yellowtuna"
+path = "src/yellowtuna.rs"
+
+[dependencies]
+egui = "0.28.1"
+eframe = { version = "0.28.1", features = ["default_fonts", "glow"] }
+rfd = "0.14"
+syntect = "5.2"
+image = "0.24"
+clap = { version = "4.0", features = ["derive"] }
+glob = "0.3"
+shellexpand = "3.0"
+
+# Web support
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+console_error_panic_hook = "0.1"
+tracing-wasm = "0.2"
+
+# Platform-specific optimizations
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+cocoa = "0.24"
+objc = "0.2"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+gtk = "0.15"
+
+[package.metadata.bundle]
+name = "YellowcakeIDE"
+identifier = "com.yellowcake.ide"
+icon = ["assets/icon.png"]
+category = "Developer Tool"
+short_description = "A Frutiger Aero styled IDE"
+long_description = "A beautiful Frutiger Aero styled IDE with support for multiple programming languages including the custom Yellercake language."
+
+# Debian package metadata
+[package.metadata.deb]
+name = "yellowcake-ide"
+maintainer = "YellowcakeIDE Team <team@yellowcake-ide.com>"
+copyright = "2024, YellowcakeIDE Team"
+license-file = ["LICENSE", "4"]
+extended-description = """\
+A beautiful Frutiger Aero styled IDE with support for multiple 
+programming languages including the custom Yellercake language.
+Features glass panels, background images, and smooth animations."""
+depends = "$auto"
+section = "editors"
+priority = "optional"
+assets = [
+    ["target/release/yellowcake-ide", "usr/bin/", "755"],
+    ["assets/icon.png", "usr/share/icons/hicolor/256x256/apps/", "644"],
+]
+
+# AppImage metadata
+[package.metadata.appimage]
+name = "YellowcakeIDE"
+icon = "assets/icon.png"
