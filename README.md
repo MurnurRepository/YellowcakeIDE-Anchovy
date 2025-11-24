@@ -1,5 +1,5 @@
 # YellowcakeIDE - Anchovy Edition
-
+PSSTT! this IDE also has test files, please test and report issues.
 A Frutiger Aero styled IDE built in Rust using egui, supporting multiple programming languages including the custom Yellowcake language.
 
 ## Features
@@ -61,5 +61,6 @@ The custom Yellowcake language (`.yelcake` extension) is designed with more huma
 ## License
 
 MIT License - see LICENSE file for details
+
 
 
