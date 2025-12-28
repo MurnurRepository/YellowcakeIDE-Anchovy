@@ -28,7 +28,6 @@ A Frutiger Aero styled IDE built in Rust using egui, supporting multiple program
 - 📋 JSON
 - 📊 Julia
 - 🌙 Lua
-- 🎮 Luau
 - ☢️ Yellercake
 
 ## Installation
@@ -61,6 +60,7 @@ The custom Yellowcake language (`.yelcake` extension) is designed with more huma
 ## License
 
 MIT License - see LICENSE file for details
+
 
 
 
